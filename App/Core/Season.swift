@@ -75,7 +75,6 @@ struct Prompts: Codable, Sendable {
 enum Season {
     struct Term {
         let name: String
-        let season: String
         let palette: String
         let accent: String
     }
@@ -88,30 +87,30 @@ enum Season {
 
     // Index i covers solar longitudes [15*i, 15*i + 15); the term itself starts at 15*i.
     static let terms: [Term] = [
-        Term(name: "春分", season: "mid spring", palette: "rapeseed yellow, fresh spring green, clear sky blue and soft white", accent: "a touch of cherry blossom pink"),
-        Term(name: "清明", season: "late spring", palette: "celadon green, rain grey, soft white and pale jade", accent: "a hint of willow yellow-green"),
-        Term(name: "谷雨", season: "late spring", palette: "tea green, peony pink, warm grey and cream", accent: "a small deep peony magenta"),
-        Term(name: "立夏", season: "early summer", palette: "emerald, fresh lime, pale mint and cream", accent: "a touch of lotus pink"),
-        Term(name: "小满", season: "early summer", palette: "ripening wheat gold, leaf green, sky blue and warm white", accent: "a touch of poppy red"),
-        Term(name: "芒种", season: "early summer", palette: "harvest amber, deep green, warm white and straw", accent: "a touch of vivid orange"),
-        Term(name: "夏至", season: "midsummer", palette: "lotus pink, deep teal, bright white and aqua", accent: "a touch of golden sun yellow"),
-        Term(name: "小暑", season: "midsummer", palette: "turquoise, coral, sand and pale sky", accent: "a touch of sunlit lemon"),
-        Term(name: "大暑", season: "midsummer", palette: "storm indigo, cobalt blue, pale cloud white and silver", accent: "a touch of fiery orange"),
-        Term(name: "立秋", season: "early autumn", palette: "pale gold, sage green, soft sky blue and cream", accent: "a touch of first-leaf amber"),
-        Term(name: "处暑", season: "early autumn", palette: "rice gold, terracotta, soft blue and warm white", accent: "a touch of burnt sienna"),
-        Term(name: "白露", season: "mid autumn", palette: "silver white, pale lavender, misty grey-blue and pearl", accent: "a touch of soft rose"),
-        Term(name: "秋分", season: "mid autumn", palette: "osmanthus gold, burnt orange, deep teal and cream", accent: "a touch of bright amber"),
-        Term(name: "寒露", season: "late autumn", palette: "maple red, chrysanthemum yellow, slate blue and warm grey", accent: "a touch of deep crimson"),
-        Term(name: "霜降", season: "late autumn", palette: "persimmon orange, muted gold, slate blue-grey and warm cream", accent: "a touch of bright persimmon red"),
-        Term(name: "立冬", season: "early winter", palette: "smoky violet, dusty rose, pewter grey and pale cream", accent: "a touch of cold silver"),
-        Term(name: "小雪", season: "early winter", palette: "ice blue, pale lilac, soft grey and snow white", accent: "a touch of pale rose gold"),
-        Term(name: "大雪", season: "mid winter", palette: "snow white, deep navy, silver grey and pale blue", accent: "a touch of warm candle amber"),
-        Term(name: "冬至", season: "midwinter", palette: "deep indigo, warm lantern amber, ink blue and soft cream", accent: "a touch of glowing lantern red"),
-        Term(name: "小寒", season: "midwinter", palette: "plum, frost blue, pale grey and ivory", accent: "a touch of first-blossom pink"),
-        Term(name: "大寒", season: "late winter", palette: "deep teal blue, wintersweet yellow, slate and pale ice", accent: "a touch of bright wintersweet gold"),
-        Term(name: "立春", season: "early spring", palette: "pale willow green, blush pink, cream and light sky blue", accent: "a touch of fresh bud green"),
-        Term(name: "雨水", season: "early spring", palette: "misty teal grey, soft peach, pale green and white", accent: "a touch of early plum pink"),
-        Term(name: "惊蛰", season: "mid spring", palette: "fresh green, peach blossom pink, pale sky blue and cream", accent: "a touch of lilac"),
+        Term(name: "春分", palette: "rapeseed yellow, fresh spring green, clear sky blue and soft white", accent: "a touch of cherry blossom pink"),
+        Term(name: "清明", palette: "celadon green, rain grey, soft white and pale jade", accent: "a hint of willow yellow-green"),
+        Term(name: "谷雨", palette: "tea green, peony pink, warm grey and cream", accent: "a small deep peony magenta"),
+        Term(name: "立夏", palette: "emerald, fresh lime, pale mint and cream", accent: "a touch of lotus pink"),
+        Term(name: "小满", palette: "ripening wheat gold, leaf green, sky blue and warm white", accent: "a touch of poppy red"),
+        Term(name: "芒种", palette: "harvest amber, deep green, warm white and straw", accent: "a touch of vivid orange"),
+        Term(name: "夏至", palette: "lotus pink, deep teal, bright white and aqua", accent: "a touch of golden sun yellow"),
+        Term(name: "小暑", palette: "turquoise, coral, sand and pale sky", accent: "a touch of sunlit lemon"),
+        Term(name: "大暑", palette: "storm indigo, cobalt blue, pale cloud white and silver", accent: "a touch of fiery orange"),
+        Term(name: "立秋", palette: "pale gold, sage green, soft sky blue and cream", accent: "a touch of first-leaf amber"),
+        Term(name: "处暑", palette: "rice gold, terracotta, soft blue and warm white", accent: "a touch of burnt sienna"),
+        Term(name: "白露", palette: "silver white, pale lavender, misty grey-blue and pearl", accent: "a touch of soft rose"),
+        Term(name: "秋分", palette: "osmanthus gold, burnt orange, deep teal and cream", accent: "a touch of bright amber"),
+        Term(name: "寒露", palette: "maple red, chrysanthemum yellow, slate blue and warm grey", accent: "a touch of deep crimson"),
+        Term(name: "霜降", palette: "persimmon orange, muted gold, slate blue-grey and warm cream", accent: "a touch of bright persimmon red"),
+        Term(name: "立冬", palette: "smoky violet, dusty rose, pewter grey and pale cream", accent: "a touch of cold silver"),
+        Term(name: "小雪", palette: "ice blue, pale lilac, soft grey and snow white", accent: "a touch of pale rose gold"),
+        Term(name: "大雪", palette: "snow white, deep navy, silver grey and pale blue", accent: "a touch of warm candle amber"),
+        Term(name: "冬至", palette: "deep indigo, warm lantern amber, ink blue and soft cream", accent: "a touch of glowing lantern red"),
+        Term(name: "小寒", palette: "plum, frost blue, pale grey and ivory", accent: "a touch of first-blossom pink"),
+        Term(name: "大寒", palette: "deep teal blue, wintersweet yellow, slate and pale ice", accent: "a touch of bright wintersweet gold"),
+        Term(name: "立春", palette: "pale willow green, blush pink, cream and light sky blue", accent: "a touch of fresh bud green"),
+        Term(name: "雨水", palette: "misty teal grey, soft peach, pale green and white", accent: "a touch of early plum pink"),
+        Term(name: "惊蛰", palette: "fresh green, peach blossom pink, pale sky blue and cream", accent: "a touch of lilac"),
     ]
 
     // The style rotates daily, the composition every four days.
