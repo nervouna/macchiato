@@ -38,4 +38,11 @@ final class SeasonTests: XCTestCase {
         XCTAssertEqual(Day("2026-10-31")?.description, "2026-10-31")
         XCTAssertNil(Day("2026-13-01"))
     }
+
+    func testDayFromDateIsGregorianInGivenTimeZone() {
+        let instant = Date(timeIntervalSince1970: 1_798_761_600) // 2027-01-01 00:00 UTC
+        XCTAssertEqual(Day(instant, timeZone: TimeZone(identifier: "UTC")!).description, "2027-01-01")
+        XCTAssertEqual(Day(instant, timeZone: TimeZone(identifier: "America/New_York")!).description, "2026-12-31")
+        XCTAssertEqual(Day(instant, timeZone: TimeZone(identifier: "Asia/Shanghai")!).description, "2027-01-01")
+    }
 }

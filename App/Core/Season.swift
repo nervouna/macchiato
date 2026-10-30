@@ -12,7 +12,10 @@ struct Day: Comparable, CustomStringConvertible, Sendable {
         self.day = day
     }
 
-    init(_ date: Date, calendar: Calendar = .current) {
+    /// Always Gregorian: `Calendar.current` follows the user's calendar setting (Chinese, Japanese, ...).
+    init(_ date: Date, timeZone: TimeZone = .current) {
+        var calendar = Calendar(identifier: .gregorian)
+        calendar.timeZone = timeZone
         let parts = calendar.dateComponents([.year, .month, .day], from: date)
         self.init(year: parts.year!, month: parts.month!, day: parts.day!)
     }
