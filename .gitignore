@@ -1,0 +1,6 @@
+.DS_Store
+/build/
+/Macchiato.xcodeproj/
+/Config/Info.plist
+xcuserdata/
+DerivedData/

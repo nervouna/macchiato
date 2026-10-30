@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="half"><path d="M0,0 L700,0 C470,300 640,700 430,1024 L0,1024 Z"/></clipPath>
+    <radialGradient id="orange" cx="240" cy="780" r="640" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FF7438"/><stop offset="1" stop-color="#FF7438" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="gold" cx="400" cy="540" r="430" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#FFC773" stop-opacity="0.95"/><stop offset="1" stop-color="#FFC773" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="sky" cx="740" cy="140" r="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#8DB0E6"/><stop offset="1" stop-color="#8DB0E6" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#half)">
+    <rect width="1024" height="1024" fill="#FBF3E6"/>
+    <rect width="1024" height="1024" fill="url(#orange)"/>
+    <rect width="1024" height="1024" fill="url(#gold)"/>
+    <rect width="1024" height="1024" fill="url(#sky)"/>
+  </g>
+</svg>

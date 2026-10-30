@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1024" height="1024" viewBox="0 0 1024 1024">
+  <defs>
+    <clipPath id="half"><path d="M700,0 C470,300 640,700 430,1024 L1024,1024 L1024,0 Z"/></clipPath>
+    <radialGradient id="ember" cx="790" cy="830" r="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#DB4219" stop-opacity="0.95"/><stop offset="1" stop-color="#DB4219" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="deep" cx="830" cy="250" r="560" gradientUnits="userSpaceOnUse">
+      <stop offset="0" stop-color="#1F5FD0"/><stop offset="1" stop-color="#1F5FD0" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <g clip-path="url(#half)">
+    <rect width="1024" height="1024" fill="url(#deep)"/>
+    <rect width="1024" height="1024" fill="url(#ember)"/>
+  </g>
+</svg>
